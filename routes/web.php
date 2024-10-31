@@ -93,3 +93,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/trainers', [TrainerController::class, 'index'])->name('trainers.index');
 Route::get('/trainers/create', [TrainerController::class, 'create'])->name('trainers.create');
 Route::post('/trainers', [TrainerController::class, 'store'])->name('trainers.store');
+
+//Route::get('/trainers',[TrainerController::class, 'destroy']->id('trainers.delete'));
+Route::resource('trainers', TrainerController::class);
+Route::get('delete/{id}', [TrainerController::class, 'destroy']);

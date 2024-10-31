@@ -9,5 +9,5 @@ class Trainer extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'avatar'];
+    protected $fillable = ['name', 'apellido', 'avatar'];
 }
